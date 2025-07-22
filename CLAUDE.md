@@ -12,11 +12,15 @@ This is a minimalist static website hosted on GitHub Pages for Credentum (creden
 /
 ├── index.html         # Main HTML page with tagline display
 ├── CNAME             # GitHub Pages custom domain configuration (credentum.ai)
-└── css/
-    ├── reset.css     # CSS reset for cross-browser consistency
-    ├── styles.css    # Main styles with responsive design
-    └── themes/
-        └── grey-white.css  # Color theme definitions
+├── css/
+│   ├── reset.css     # CSS reset for cross-browser consistency
+│   ├── styles.css    # Main styles with responsive design
+│   └── themes/
+│       └── grey-white.css  # Color theme definitions
+└── .github/
+    └── ISSUE_TEMPLATE/
+        ├── investigation.md    # Template for unclear scope issues
+        └── sprint-task.md      # Template for Claude Code ready tasks
 ```
 
 ## Key Technical Details
@@ -37,3 +41,23 @@ Since this is a static site, development is straightforward:
 ## Deployment
 
 The site automatically deploys to credentum.ai through GitHub Pages when changes are pushed to the main branch.
+
+## Issue Management
+
+This repository uses GitHub Issue Templates to structure work:
+
+### Investigation Template (`investigation.md`)
+Use for problems with unclear scope that require systematic investigation:
+- Documents symptoms without assumptions
+- Tracks investigation progress and findings
+- Captures root cause analysis and lessons learned
+- Helps identify when to split complex issues
+
+### Sprint Task Template (`sprint-task.md`)
+Use for well-defined tasks ready for Claude Code execution:
+- Includes Claude Code readiness checklist
+- Estimates file scope (should be < 4 files, < 400 LoC)
+- Contains pre-execution context and implementation notes
+- Designed to be updated during AI-assisted implementation
+
+When creating issues, choose the appropriate template based on whether the scope is clear and the task is ready for implementation.

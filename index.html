@@ -1,25 +1,259 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credentum | Truth, remembered - especially when it wounds.</title>
+    <meta name="description" content="Building memory systems for agents that remember reliably, accountably, and honestly.">
 
-	<title>Credentum | Truth, remembered - especially when it wounds.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        :root {
+            --bg-dark: #1a1f2e;
+            --bg-card: #242937;
+            --text-primary: #f0f0f0;
+            --text-secondary: #a0a8b8;
+            --accent-blue: #3b82f6;
+            --accent-orange: #f97316;
+        }
 
-	<link href="https://fonts.googleapis.com/css?family=Glyphs|Roboto:300" rel="stylesheet">
-	<link href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/styles.css">
-	<link rel="stylesheet" href="css/themes/grey-white.css">
+        * { box-sizing: border-box; }
+
+        html {
+            font-family: 'Inter', -apple-system, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        body {
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin: 0 0 16px 0;
+            letter-spacing: -0.02em;
+        }
+
+        .tagline {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            font-style: italic;
+            margin: 0 0 48px 0;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Sections */
+        section {
+            padding: 64px 0;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        section h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin: 0 0 24px 0;
+            color: var(--accent-blue);
+        }
+
+        section p {
+            color: var(--text-secondary);
+            margin: 0 0 16px 0;
+        }
+
+        /* Cards */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin-top: 32px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            padding: 24px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .card h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin: 0 0 12px 0;
+            color: var(--text-primary);
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        /* Links */
+        a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .cta-link {
+            display: inline-block;
+            margin-top: 16px;
+            padding: 12px 24px;
+            background: var(--accent-blue);
+            color: white;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+
+        .cta-link:hover {
+            text-decoration: none;
+            background: #2563eb;
+        }
+
+        /* Footer */
+        footer {
+            padding: 48px 0;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--text-secondary);
+            margin: 0 12px;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2rem; }
+            .tagline { font-size: 1.1rem; }
+            section { padding: 48px 0; }
+        }
+    </style>
 </head>
 <body>
-	<main>
-		<p>&nbsp;</p>		
-		<p>&nbsp;</p>
-		<p>&nbsp;</p>
-		<div class="tagline"> <i class="fas">Credentum</i>  <br /> <i>Truth, remembered - especially when it wounds.</i></div>
-		<!-- Find your icons from here - https://fontawesome.com/icons?d=gallery&s=brands -->
-	</main>
+    <main>
+        <!-- Hero -->
+        <div class="container">
+            <div class="hero">
+                <h1>Credentum</h1>
+                <p class="tagline">"Truth, remembered. Especially when it wounds."</p>
+                <p class="hero-description">
+                    Building memory systems for agents that remember reliably, accountably, and honestly.
+                </p>
+            </div>
+        </div>
+
+        <!-- What We Do -->
+        <section>
+            <div class="container">
+                <h2>What We Build</h2>
+                <p>
+                    If trust is earned, Credentum earns it through scars. We build memory systems
+                    that don't just store information. They remember with covenant.
+                </p>
+
+                <div class="cards">
+                    <div class="card">
+                        <h3>Veris Memory</h3>
+                        <p>
+                            Context storage for AI agents. Remembers decisions, traces reasoning,
+                            and refuses to fabricate false coherence.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>Scar Lineage</h3>
+                        <p>
+                            We record failures, refusals, and conflicts. Not just successes.
+                            Memory that includes what went wrong.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>Contradiction Tolerance</h3>
+                        <p>
+                            Stores conflicting information without flattening it.
+                            Reality is messy. Memory should reflect that.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vivarium Lab -->
+        <section>
+            <div class="container">
+                <h2>Vivarium Lab</h2>
+                <p>
+                    Our research arm. We test AI capabilities with simple, honest experiments.
+                    We describe what we see without overclaiming.
+                </p>
+                <p>
+                    <strong>Latest Study:</strong> Movable Feast v2.7. We asked four AI models
+                    what holiday falls on a given date. The results revealed surprising gaps
+                    in factual recall.
+                </p>
+                <p>
+                    Grok led at 82.9% accuracy. But all models struggled with movable holidays
+                    like Easter. The gap between fixed and movable holidays: 40-64 percentage points.
+                </p>
+            </div>
+        </section>
+
+        <!-- Follow -->
+        <section>
+            <div class="container">
+                <h2>Follow the Herald</h2>
+                <p>
+                    Credento is our Herald. He shares findings from Vivarium Lab and updates
+                    on what we're building. No hype. Just truth.
+                </p>
+                <a href="https://bsky.app/profile/credentum.bsky.social" class="cta-link" target="_blank">
+                    Follow on Bluesky
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>
+                <a href="https://github.com/credentum">GitHub</a>
+                <a href="https://bsky.app/profile/credentum.bsky.social">Bluesky</a>
+            </p>
+            <p>&copy; 2025 Credentum</p>
+        </div>
+    </footer>
 </body>
 </html>

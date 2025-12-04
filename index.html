@@ -7,6 +7,7 @@
     <meta name="description" content="Building memory systems for agents that remember reliably, accountably, and honestly.">
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/reset.css">
     <style>
         :root {
@@ -223,11 +224,16 @@
             font-weight: 500;
             margin: 0 0 24px 0;
             color: var(--accent-blue);
+            text-align: center;
         }
 
-        section p {
+        section > .container > p {
             color: var(--text-secondary);
             margin: 0 0 16px 0;
+            text-align: center;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         /* Cards */
@@ -272,30 +278,39 @@
             text-decoration: underline;
         }
 
-        /* Social Grid */
-        .social-grid {
+        /* Social Icons */
+        .social-icons {
             display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
+            gap: 24px;
             margin-top: 24px;
             justify-content: center;
         }
 
-        .social-link {
-            display: inline-block;
-            padding: 10px 20px;
-            background: var(--bg-card);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 6px;
-            color: var(--text-primary);
-            font-size: 0.9rem;
-            transition: all 0.2s;
+        .social-icon {
+            color: var(--text-secondary);
+            font-size: 1.5rem;
+            transition: color 0.2s, transform 0.2s;
         }
 
-        .social-link:hover {
-            background: var(--accent-blue);
-            border-color: var(--accent-blue);
+        .social-icon:hover {
+            color: var(--kintsugi-gold);
             text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        /* Credento Avatar */
+        .credento-section {
+            text-align: center;
+        }
+
+        .credento-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 24px;
+            border: 3px solid var(--kintsugi-gold);
+            box-shadow: 0 4px 20px rgba(212, 165, 116, 0.2);
         }
 
         /* Footer */
@@ -314,12 +329,13 @@
 
         .footer-links a {
             color: var(--text-secondary);
-            margin: 0 8px;
+            margin: 0 12px;
             font-size: 0.85rem;
         }
 
         .footer-links a:hover {
             color: var(--kintsugi-gold);
+            text-decoration: none;
         }
 
         .footer-tagline {
@@ -379,7 +395,7 @@
             <div class="container">
                 <h3>Get research findings first</h3>
                 <p>
-                    Studies like Movable Feast before they hit social. No spam, just findings.
+                    Studies like Movable Feast before they go public. No&nbsp;spam.
                 </p>
                 <form class="signup-form" action="https://buttondown.email/api/emails/embed-subscribe/credentum" method="post" target="_blank">
                     <input type="email" name="email" placeholder="you@example.com" required>
@@ -427,20 +443,21 @@
             </section>
 
             <!-- Follow -->
-            <section>
+            <section class="credento-section">
                 <div class="container">
+                    <img src="credento.jpg" alt="Credento the Herald" class="credento-avatar">
                     <h2>Follow Credento</h2>
                     <p>
-                        Credento is our Herald. He shares research findings, updates on what we're building,
+                        Our Herald shares research findings, updates on what we're building,
                         and honest takes on AI. No hype. Just truth.
                     </p>
-                    <div class="social-grid">
-                        <a href="https://twitter.com/credentum" class="social-link" target="_blank">Twitter/X</a>
-                        <a href="https://bsky.app/profile/credentum.bsky.social" class="social-link" target="_blank">Bluesky</a>
-                        <a href="https://www.youtube.com/@Credentum" class="social-link" target="_blank">YouTube</a>
-                        <a href="https://www.reddit.com/user/credentum/" class="social-link" target="_blank">Reddit</a>
-                        <a href="https://linkedin.com/company/credentum-ai" class="social-link" target="_blank">LinkedIn</a>
-                        <a href="https://www.instagram.com/credentum_ai/" class="social-link" target="_blank">Instagram</a>
+                    <div class="social-icons">
+                        <a href="https://twitter.com/credentum" class="social-icon" target="_blank" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://bsky.app/profile/credentum.bsky.social" class="social-icon" target="_blank" aria-label="Bluesky"><i class="fab fa-bluesky"></i></a>
+                        <a href="https://www.youtube.com/@Credentum" class="social-icon" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.reddit.com/user/credentum/" class="social-icon" target="_blank" aria-label="Reddit"><i class="fab fa-reddit"></i></a>
+                        <a href="https://linkedin.com/company/credentum-ai" class="social-icon" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/credentum_ai/" class="social-icon" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </section>

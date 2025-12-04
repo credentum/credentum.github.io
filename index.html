@@ -49,6 +49,14 @@
             padding: 80px 0;
         }
 
+        .hero-logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+        }
+
         .hero h1 {
             font-size: 2.5rem;
             font-weight: 600;
@@ -141,6 +149,32 @@
             background: #2563eb;
         }
 
+        /* Social Grid */
+        .social-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 24px;
+            justify-content: center;
+        }
+
+        .social-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background: var(--bg-card);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 6px;
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+
+        .social-link:hover {
+            background: var(--accent-blue);
+            border-color: var(--accent-blue);
+            text-decoration: none;
+        }
+
         /* Footer */
         footer {
             padding: 48px 0;
@@ -150,9 +184,24 @@
             font-size: 0.9rem;
         }
 
-        footer a {
+        .footer-links {
+            margin-bottom: 16px;
+        }
+
+        .footer-links a {
             color: var(--text-secondary);
-            margin: 0 12px;
+            margin: 0 8px;
+            font-size: 0.85rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-blue);
+        }
+
+        .footer-tagline {
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-bottom: 8px;
         }
 
         /* Responsive */
@@ -168,10 +217,12 @@
         <!-- Hero -->
         <div class="container">
             <div class="hero">
+                <img src="logo.png" alt="Credentum - Forged ring with kintsugi mend" class="hero-logo">
                 <h1>Credentum</h1>
                 <p class="tagline">"Truth, remembered. Especially when it wounds."</p>
                 <p class="hero-description">
                     Building memory systems for agents that remember reliably, accountably, and honestly.
+                    Like the gold-mended crack in our ring, we believe scars are proof of authenticity.
                 </p>
             </div>
         </div>
@@ -211,47 +262,39 @@
             </div>
         </section>
 
-        <!-- Vivarium Lab -->
-        <section>
-            <div class="container">
-                <h2>Vivarium Lab</h2>
-                <p>
-                    Our research arm. We test AI capabilities with simple, honest experiments.
-                    We describe what we see without overclaiming.
-                </p>
-                <p>
-                    <strong>Latest Study:</strong> Movable Feast v2.7. We asked four AI models
-                    what holiday falls on a given date. The results revealed surprising gaps
-                    in factual recall.
-                </p>
-                <p>
-                    Grok led at 82.9% accuracy. But all models struggled with movable holidays
-                    like Easter. The gap between fixed and movable holidays: 40-64 percentage points.
-                </p>
-            </div>
-        </section>
-
         <!-- Follow -->
         <section>
             <div class="container">
-                <h2>Follow the Herald</h2>
+                <h2>Follow Credento</h2>
                 <p>
-                    Credento is our Herald. He shares findings from Vivarium Lab and updates
-                    on what we're building. No hype. Just truth.
+                    Credento is our Herald. He shares research findings, updates on what we're building,
+                    and honest takes on AI. No hype. Just truth.
                 </p>
-                <a href="https://bsky.app/profile/credentum.bsky.social" class="cta-link" target="_blank">
-                    Follow on Bluesky
-                </a>
+                <div class="social-grid">
+                    <a href="https://twitter.com/credentum" class="social-link" target="_blank">Twitter/X</a>
+                    <a href="https://bsky.app/profile/credentum.bsky.social" class="social-link" target="_blank">Bluesky</a>
+                    <a href="https://www.youtube.com/@Credentum" class="social-link" target="_blank">YouTube</a>
+                    <a href="https://www.reddit.com/user/credentum/" class="social-link" target="_blank">Reddit</a>
+                    <a href="https://linkedin.com/company/credentum-ai" class="social-link" target="_blank">LinkedIn</a>
+                    <a href="https://www.instagram.com/credentum_ai/" class="social-link" target="_blank">Instagram</a>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>
+            <p class="footer-links">
                 <a href="https://github.com/credentum">GitHub</a>
+                <a href="https://twitter.com/credentum">Twitter</a>
                 <a href="https://bsky.app/profile/credentum.bsky.social">Bluesky</a>
+                <a href="https://www.youtube.com/@Credentum">YouTube</a>
+                <a href="https://www.reddit.com/user/credentum/">Reddit</a>
+                <a href="https://linkedin.com/company/credentum-ai">LinkedIn</a>
+                <a href="https://www.instagram.com/credentum_ai/">Instagram</a>
+                <a href="https://www.facebook.com/profile.php?id=61578284660627">Facebook</a>
             </p>
+            <p class="footer-tagline">Truth, remembered.</p>
             <p>&copy; 2025 Credentum</p>
         </div>
     </footer>

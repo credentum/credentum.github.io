@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persona Skills | Vivarium Lab | Credentum</title>
+    <meta name="description" content="The Hierarchy of Agentic Reliability: From Routing to Orchestration. What we learned breaking Claude's skill system.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        :root {
+            --bg-dark: #0f1219;
+            --bg-mid: #1a1f2e;
+            --bg-card: #242937;
+            --text-primary: #f0f0f0;
+            --text-secondary: #a0a8b8;
+            --accent-blue: #3b82f6;
+            --kintsugi-gold: #d4a574;
+        }
+
+        * { box-sizing: border-box; }
+
+        html {
+            font-family: 'Inter', -apple-system, sans-serif;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        body {
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            padding: 24px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+
+        header a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        header a:hover {
+            color: var(--kintsugi-gold);
+        }
+
+        /* Article */
+        article {
+            padding: 48px 0 80px 0;
+        }
+
+        .article-meta {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-size: 2.25rem;
+            font-weight: 600;
+            margin: 0 0 8px 0;
+            letter-spacing: -0.02em;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+            margin: 0 0 32px 0;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin: 48px 0 16px 0;
+            color: var(--accent-blue);
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin: 32px 0 12px 0;
+        }
+
+        p {
+            margin: 0 0 16px 0;
+            color: var(--text-secondary);
+        }
+
+        strong {
+            color: var(--text-primary);
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+            font-size: 0.9rem;
+        }
+
+        th, td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        th {
+            color: var(--text-primary);
+            font-weight: 500;
+            background: var(--bg-card);
+        }
+
+        td {
+            color: var(--text-secondary);
+        }
+
+        tr:hover td {
+            background: rgba(255,255,255,0.02);
+        }
+
+        /* Lists */
+        ul, ol {
+            margin: 16px 0;
+            padding-left: 24px;
+            color: var(--text-secondary);
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Code */
+        code {
+            font-family: 'SF Mono', 'Fira Code', monospace;
+            font-size: 0.85em;
+            background: var(--bg-card);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        pre {
+            background: var(--bg-card);
+            padding: 16px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 16px 0;
+            font-size: 0.9rem;
+        }
+
+        pre code {
+            background: none;
+            padding: 0;
+        }
+
+        /* Highlight box */
+        .highlight-box {
+            background: var(--bg-mid);
+            border-left: 3px solid var(--kintsugi-gold);
+            padding: 16px 20px;
+            margin: 24px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .highlight-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Links */
+        a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            padding: 32px 0;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            h1 { font-size: 1.75rem; }
+            .subtitle { font-size: 1.1rem; }
+            table { font-size: 0.8rem; }
+            th, td { padding: 8px 10px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="../">← Back to Credentum</a>
+        </div>
+    </header>
+
+    <article>
+        <div class="container">
+            <p class="article-meta">Vivarium Lab Research Guide • December 15, 2025</p>
+            <h1>Persona Skills for Claude</h1>
+            <p class="subtitle">The Hierarchy of Agentic Reliability: From Routing to Orchestration</p>
+
+            <div class="highlight-box">
+                <p><strong>Key Finding:</strong> Natural Language Routing achieves 81%+ reliability for single-shot tool selection using few-shot examples and negative constraints. But it fails completely on compound, multi-step prompts. We found the architectural ceiling.</p>
+            </div>
+
+            <h2>What We Did</h2>
+            <p>We used Anthropic's Agent Skills system to shape Claude's behavioral voice/persona rather than its procedural capabilities. This is off-label but effective—skills are designed for task workflows, but work for disposition shaping too.</p>
+            <p>We ran a 16-phase evaluation testing activation rates, failure patterns, and architectural limits.</p>
+
+            <h2>The Hypothesis</h2>
+            <p><strong>Can Claude's Skills system be used for persona/voice shaping rather than procedural task completion?</strong></p>
+            <p>Traditional use: "When user wants to create a PDF, load these instructions."</p>
+            <p>Our use: "When user wants exploratory dialogue, adopt this conversational voice."</p>
+
+            <h2>Key Findings</h2>
+
+            <h3>1. Activation is Bimodal</h3>
+            <p>The overall activation rate of 56% is misleading. Activation is actually bimodal:</p>
+            <table>
+                <thead>
+                    <tr><th>Prompt Type</th><th>Activation Rate</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Abstract trigger phrase only</td><td><strong>~0%</strong></td></tr>
+                    <tr><td>Concrete dilemma with named options</td><td><strong>~100%</strong></td></tr>
+                    <tr><td>Mixed/ambiguous</td><td>Variable</td></tr>
+                </tbody>
+            </table>
+
+            <h3>2. Few-Shot Examples Double Activation</h3>
+            <p>Description phrasing matters enormously:</p>
+            <ul>
+                <li><strong>Semantic definitions only:</strong> 39% activation</li>
+                <li><strong>With few-shot examples:</strong> 81% activation</li>
+            </ul>
+            <p>Examples create a "semantic cone"—the model interpolates between them rather than litigating against rigid definitions.</p>
+
+            <h3>3. Three Failure Classes (All Solved)</h3>
+            <table>
+                <thead>
+                    <tr><th>Failure Class</th><th>Symptom</th><th>Solution</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Ambiguity</strong></td><td>Wrong skill activates</td><td>Few-shot examples (semantic cone)</td></tr>
+                    <tr><td><strong>Overconfidence</strong></td><td>Skill activates when shouldn't</td><td>PROHIBITED constraints</td></tr>
+                    <tr><td><strong>Collision</strong></td><td>Overlapping namespaces</td><td>Scope exclusion</td></tr>
+                </tbody>
+            </table>
+
+            <h3>4. The Hard Limit: Compound Prompts Fail</h3>
+            <div class="highlight-box">
+                <p><strong>Phase 16 Discovery:</strong> Natural Language Routing is single-shot. Compound prompts like "do X, then trigger skill Y" fail due to:</p>
+                <ul style="margin-bottom: 0;">
+                    <li><strong>Token Gravity:</strong> Early tasks absorb all attention ("Skip-to-Panel")</li>
+                    <li><strong>Context Decay:</strong> Later instructions fade ("First-Intent-Wins")</li>
+                </ul>
+            </div>
+
+            <h2>Conclusion</h2>
+            <p><strong>Natural Language Routing is sufficient for Tool Selection but insufficient for Task Orchestration.</strong></p>
+            <p>Multi-step workflows require a dedicated Supervisor state-manager or explicit Human-in-the-Loop intervention.</p>
+
+            <h2>Recommendations</h2>
+            <table>
+                <thead>
+                    <tr><th>Use Case</th><th>Recommended Approach</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Single-shot tool selection</td><td>Natural Language Routing</td></tr>
+                    <tr><td>Multi-step workflows</td><td>Human-in-the-Loop OR Supervisor pattern</td></tr>
+                    <tr><td>High-reliability routing</td><td>Few-shot examples + PROHIBITED constraints</td></tr>
+                    <tr><td>Persona/behavioral skills</td><td>Observable signals + verbal tics + examples</td></tr>
+                </tbody>
+            </table>
+
+            <h2>Full Guide</h2>
+            <p>The complete 1,450-line practitioner's guide includes:</p>
+            <ul>
+                <li>16-phase experiment narrative</li>
+                <li>48 systematic test results</li>
+                <li>Skill templates and examples</li>
+                <li>Expert Panel Framework</li>
+                <li>Reproducible test harness</li>
+            </ul>
+            <p><a href="https://github.com/credentum/project-vivarium/blob/main/studies/persona-skills/persona-skills-guide.md">Read the full guide on GitHub →</a></p>
+
+            <h2>Materials</h2>
+            <p>All materials available at: <a href="https://github.com/credentum/project-vivarium">github.com/credentum/project-vivarium</a></p>
+            <ul>
+                <li>Guide: <code>studies/persona-skills/persona-skills-guide.md</code></li>
+                <li>Test harness: <code>studies/persona-skills/run-tests.sh</code></li>
+                <li>Results: <code>studies/persona-skills/results/</code></li>
+            </ul>
+
+            <p style="margin-top: 48px; font-style: italic; color: var(--text-secondary);">
+                This research was conducted collaboratively by Matt + Claude (Opus 4.5). Study complete December 2025.
+            </p>
+        </div>
+    </article>
+
+    <footer>
+        <div class="container">
+            <p>Vivarium Lab • <a href="../">Credentum AI</a></p>
+        </div>
+    </footer>
+</body>
+</html>

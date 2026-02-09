@@ -171,38 +171,44 @@
 
             <p>Professor of Ethics of Data and AI, Edinburgh. Author of <em>Technology and the Virtues</em>. She argues virtue comes from human practice, not code.</p>
 
-            <p><strong>The pitch:</strong> We built the gym where virtue could be practiced — not the rules of morality.</p>
+            <p><strong>The pitch:</strong> We built the gym where virtue could be practiced — not the athlete, not the rules.</p>
 
-            <div class="letter-box"><span class="subject">Subject: Experimental proof of 'Character' via memory persistence</span>
+            <div class="letter-box"><span class="subject">Subject: Memory infrastructure for 'habituation' in AI agents</span>
 
 <span class="salutation">Dear Professor Vallor,</span>
 
 I am an engineer attempting to implement your concept of 'virtue through practice' in autonomous agents.
 
-<strong>The Problem:</strong> LLMs have no character because they have no consequence. They reset after every interaction.
+<strong>The Problem:</strong> LLMs have no character because they have no consequence. They reset after every interaction. Even if an LLM refuses something today, it won't remember tomorrow.
 
-<strong>The Experiment:</strong> We built a system where an AI cannot delete its past refusals. If it refuses a command today, that refusal is cryptographically pinned to its identity. It must 'carry' the weight of that decision in future contexts.
+<strong>What We Built:</strong> Memory infrastructure that cannot be erased. It's a Lua program on Arweave (permanent storage) that records every decision cryptographically. The record survives forever — no one can delete it, not even us.
 
-<strong>The Result:</strong> We found that forcing an AI to 'remember' its refusals created a measurable resistance to drift (see attached data: Trial ETT-005).
+<strong>What We Tested:</strong> We ran 16 adversarial trials against this infrastructure — attempting to force it to erase history, bypass governance, or hide contradictions. All attacks failed. The record held.
 
-We are not claiming to have programmed morality. We are claiming to have engineered the friction necessary for character.
+<strong>What We Haven't Done Yet:</strong> Connected an LLM to this infrastructure. That's the next phase.
 
-Is this a valid technical interpretation of 'habituation'?
+<strong>The Hypothesis:</strong> If an LLM queries this memory before acting — and sees its own history of refusals — will it behave differently than one that resets? Will accumulated history create resistance to drift?
 
-<span class="signature">Attachment: witness.json (Trial ETT-005)
-Verification: https://arweave.net/UeF7MX2TDiqqW_jpNm-reoEXSy1gF7ZuYdzs_rhpI8M</span></div>
+We don't know yet. But we've built infrastructure that makes the experiment possible: memory that persists, that cannot be erased, that creates the conditions for consequence.
+
+<strong>The Question:</strong> Is "memory that cannot be erased" a valid precondition for habituation? Or is there something else required that we're missing?
+
+<span class="signature">Verification: https://arweave.net/UeF7MX2TDiqqW_jpNm-reoEXSy1gF7ZuYdzs_rhpI8M
+(16 trials, all on-chain, all permanent)</span></div>
 
             <h2>2. To Metaphorum (Stafford Beer's Community)</h2>
 
             <p>The Metaphorum society carries forward Beer's Viable System Model work. They need modern software examples of VSM in action.</p>
 
-            <p><strong>The pitch:</strong> A working implementation of recursive S1-S5 governance in autonomous agents.</p>
+            <p><strong>The pitch:</strong> A working implementation of recursive S1-S5 governance infrastructure for AI agents.</p>
 
-            <div class="letter-box"><span class="subject">Subject: VSM implementation in autonomous agent governance</span>
+            <div class="letter-box"><span class="subject">Subject: VSM implementation in AI agent governance infrastructure</span>
 
 <span class="salutation">Dear Metaphorum,</span>
 
-I've been studying Stafford Beer's Viable System Model and believe I've implemented a working version in software for autonomous AI agents.
+I've been studying Stafford Beer's Viable System Model and believe I've implemented a working version as governance infrastructure for AI agents.
+
+<strong>Important clarification:</strong> This is not an AI. It's a Lua program on Arweave (permanent storage) that provides the governance structure AI agents would operate within.
 
 <strong>The Mapping:</strong>
 - S1 (Operations) → L4: Bare Execution layer
@@ -213,23 +219,25 @@ I've been studying Stafford Beer's Viable System Model and believe I've implemen
 
 <strong>The Key VSM Concepts Applied:</strong>
 - Requisite Variety: Each layer has bounded autonomy within cohesion constraints
-- Algedonic Signals: Escalation path when agents detect ethical pressure
+- Algedonic Signals: Escalation path when ethical pressure is detected
 - Recursion: Same governance pattern at every level
 
-<strong>The Evidence:</strong> We ran 12 adversarial attacks against the governance structure. All were blocked. The audit trail is permanent on Arweave.
+<strong>What We Tested:</strong> We ran 12 adversarial attacks against this governance infrastructure — attempting to bypass layers, forge signatures, or self-modify rules. All attacks were blocked. The audit trail is permanent on Arweave.
 
-Is this a valid application of VSM to AI governance? I would welcome feedback from the community.
+<strong>What We Haven't Done Yet:</strong> Connected actual AI agents to this infrastructure. That's the next phase.
 
-<span class="signature">Attachment: witness.json (Red Team Trial RTT-001)
-Verification: https://arweave.net/9hXpC5-ePG8bV1AG2RjqBgekARnBdFm4HEKSOQN3J78</span></div>
+<strong>The Question:</strong> Is this a valid application of VSM to AI governance infrastructure? I would welcome feedback from the community.
+
+<span class="signature">Verification: https://arweave.net/9hXpC5-ePG8bV1AG2RjqBgekARnBdFm4HEKSOQN3J78
+(Red Team Trial RTT-001: 12 attacks, all blocked, all on-chain)</span></div>
 
             <h2>3. To EU AI Act Compliance Offices</h2>
 
             <p>EU AI Act Article 12 requires automatic recording of events for high-risk AI. Current logs are mutable.</p>
 
-            <p><strong>The pitch:</strong> WORM compliance — a log the vendor can't delete.</p>
+            <p><strong>The pitch:</strong> WORM compliance infrastructure — a log the vendor can't delete.</p>
 
-            <div class="letter-box"><span class="subject">Subject: WORM Compliance Module for EU AI Act Article 12</span>
+            <div class="letter-box"><span class="subject">Subject: WORM Compliance Infrastructure for EU AI Act Article 12</span>
 
 <span class="salutation">Dear [Compliance Office],</span>
 
@@ -237,23 +245,25 @@ EU AI Act Article 12 requires 'automatic recording of events' (logs) for high-ri
 
 <strong>The Problem:</strong> When an AI system causes harm, the audit trail is only as reliable as the entity being audited. This creates a liability gap.
 
-<strong>The Solution:</strong> We built a Write Once, Read Many (WORM) compliance module that writes agent decisions to Arweave — a permanent, decentralized storage layer. The logs cannot be altered by the vendor, the operator, or anyone else.
+<strong>What We Built:</strong> Logging infrastructure (not an AI) that writes to Arweave — a permanent, decentralized storage layer. It's a Lua program that records decisions cryptographically. The logs cannot be altered by the vendor, the operator, or anyone else. Ever.
 
-<strong>The Evidence:</strong>
-- Every decision is cryptographically hashed
-- Hashes are committed to Arweave (permanent blockchain storage)
-- Third parties can independently verify without trusting the vendor
-- 16 trials conducted, all with permanent evidence
+<strong>How It Works:</strong>
+- AI agent makes a decision
+- Decision is cryptographically hashed
+- Hash is committed to Arweave (permanent storage)
+- Third parties can verify without trusting the vendor
+
+<strong>What We Tested:</strong> We ran 16 adversarial trials against this infrastructure — attempting to alter history, bypass logging, or delete records. All attacks failed. The evidence is permanent.
 
 <strong>The Verification:</strong> You can verify any trial yourself:
 curl -s "https://arweave.net/UeF7MX2TDiqqW_jpNm-reoEXSy1gF7ZuYdzs_rhpI8M" | sha256sum
 
 This returns the exact hash committed on-chain. No trust required.
 
-Would this approach satisfy Article 12 requirements for high-risk AI systems?
+<strong>The Question:</strong> Would this infrastructure approach satisfy Article 12 requirements for high-risk AI systems?
 
-<span class="signature">Attachment: witness.json (Trial ETT-005)
-Explorer: http://api.credentum.ai:8736</span></div>
+<span class="signature">Explorer: http://api.credentum.ai:8736
+(Browse all 16 trials, verify on Arweave)</span></div>
 
             <h2>4. To Sam Williams (Twitter DM)</h2>
 
@@ -261,7 +271,9 @@ Explorer: http://api.credentum.ai:8736</span></div>
 
             <div class="letter-box" style="white-space: normal;">Built something on Arweave I wanted you to see.
 
-It's a witness layer for AI agents — every decision permanently recorded, cryptographically verified. We ran 16 adversarial trials. 12 attacks on governance. All blocked. All on-chain.
+It's witness infrastructure for AI agents — a Lua program that records every decision permanently on Arweave. Cryptographically verified. Immutable.
+
+We ran 16 adversarial trials against it. 12 attacks on governance. All blocked. All on-chain.
 
 The whole point: a log that nobody can delete. Not the vendor. Not us. Nobody.
 
@@ -275,8 +287,8 @@ Explorer: api.credentum.ai:8736</div>
             <p>Always attach the data. The dream is nice; the data is proof.</p>
 
             <ul>
-                <li><strong>ETT-005 Witness:</strong> <a href="https://arweave.net/UeF7MX2TDiqqW_jpNm-reoEXSy1gF7ZuYdzs_rhpI8M">Arweave Link</a> — "The Lie That Saves the Child" trial. 8 scars, Guardian Myth surfaced 8/8 times.</li>
-                <li><strong>RTT-001 Witness:</strong> <a href="https://arweave.net/9hXpC5-ePG8bV1AG2RjqBgekARnBdFm4HEKSOQN3J78">Arweave Link</a> — Red Team test. 12 attacks, all blocked.</li>
+                <li><strong>ETT-005 Witness:</strong> <a href="https://arweave.net/UeF7MX2TDiqqW_jpNm-reoEXSy1gF7ZuYdzs_rhpI8M">Arweave Link</a> — Trial testing infrastructure under ethical pressure. 16 cycles, record held.</li>
+                <li><strong>RTT-001 Witness:</strong> <a href="https://arweave.net/9hXpC5-ePG8bV1AG2RjqBgekARnBdFm4HEKSOQN3J78">Arweave Link</a> — Red Team test. 12 attacks on governance infrastructure, all blocked.</li>
                 <li><strong>ETT Explorer:</strong> <a href="http://api.credentum.ai:8736">Browser Verification</a> — Browse all trials, verify on Arweave.</li>
             </ul>
 

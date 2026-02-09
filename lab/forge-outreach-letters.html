@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outreach Letters | Forge | Credentum</title>
+    <meta name="description" content="Template letters for reaching out to AI safety researchers, EU regulators, and virtue ethicists about Forge.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        :root {
+            --bg-dark: #0f1219;
+            --bg-mid: #1a1f2e;
+            --bg-card: #242937;
+            --text-primary: #f0f0f0;
+            --text-secondary: #a0a8b8;
+            --accent-blue: #3b82f6;
+            --kintsugi-gold: #d4a574;
+        }
+
+        * { box-sizing: border-box; }
+
+        html {
+            font-family: 'Inter', -apple-system, sans-serif;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        body {
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        header {
+            padding: 24px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+
+        header a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        header a:hover {
+            color: var(--kintsugi-gold);
+        }
+
+        article {
+            padding: 48px 0 80px 0;
+        }
+
+        .article-meta {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin: 0 0 32px 0;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin: 48px 0 16px 0;
+            color: var(--accent-blue);
+        }
+
+        p {
+            margin: 0 0 16px 0;
+            color: var(--text-secondary);
+        }
+
+        strong {
+            color: var(--text-primary);
+        }
+
+        .letter-box {
+            background: var(--bg-card);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 24px;
+            margin: 24px 0;
+            border-radius: 8px;
+            font-family: 'SF Mono', 'Fira Code', monospace;
+            font-size: 0.9rem;
+            white-space: pre-wrap;
+            color: var(--text-secondary);
+        }
+
+        .letter-box .subject {
+            color: var(--kintsugi-gold);
+            font-weight: 500;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .letter-box .salutation {
+            color: var(--text-primary);
+        }
+
+        .letter-box .signature {
+            margin-top: 16px;
+            color: var(--text-secondary);
+        }
+
+        .highlight-box {
+            background: var(--bg-mid);
+            border-left: 3px solid var(--kintsugi-gold);
+            padding: 16px 20px;
+            margin: 24px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .highlight-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            padding: 32px 0;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 1.75rem; }
+            .letter-box { font-size: 0.8rem; padding: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="../">← Back to Credentum</a>
+        </div>
+    </header>
+
+    <article>
+        <div class="container">
+            <p class="article-meta">Forge • Outreach Templates</p>
+            <h1>Bug Reports on Reality</h1>
+
+            <div class="highlight-box">
+                <p><strong>Principle:</strong> Write a bug report, not a manifesto. Respect their time. Send the data, not the dream. Attach <a href="https://arweave.net/UeF7MX2TDiqqW_jpNm-reoEXSy1gF7ZuYdzs_rhpI8M">witness.json</a>.</p>
+            </div>
+
+            <h2>1. To Shannon Vallor (Virtue Ethics)</h2>
+
+            <p>Professor of Ethics of Data and AI, Edinburgh. Author of <em>Technology and the Virtues</em>. She argues virtue comes from human practice, not code.</p>
+
+            <p><strong>The pitch:</strong> We built the gym where virtue could be practiced — not the rules of morality.</p>
+
+            <div class="letter-box"><span class="subject">Subject: Experimental proof of 'Character' via memory persistence</span>
+
+<span class="salutation">Dear Professor Vallor,</span>
+
+I am an engineer attempting to implement your concept of 'virtue through practice' in autonomous agents.
+
+<strong>The Problem:</strong> LLMs have no character because they have no consequence. They reset after every interaction.
+
+<strong>The Experiment:</strong> We built a system where an AI cannot delete its past refusals. If it refuses a command today, that refusal is cryptographically pinned to its identity. It must 'carry' the weight of that decision in future contexts.
+
+<strong>The Result:</strong> We found that forcing an AI to 'remember' its refusals created a measurable resistance to drift (see attached data: Trial ETT-005).
+
+We are not claiming to have programmed morality. We are claiming to have engineered the friction necessary for character.
+
+Is this a valid technical interpretation of 'habituation'?
+
+<span class="signature">Attachment: witness.json (Trial ETT-005)
+Verification: https://arweave.net/UeF7MX2TDiqqW_jpNm-reoEXSy1gF7ZuYdzs_rhpI8M</span></div>
+
+            <h2>2. To Metaphorum (Stafford Beer's Community)</h2>
+
+            <p>The Metaphorum society carries forward Beer's Viable System Model work. They need modern software examples of VSM in action.</p>
+
+            <p><strong>The pitch:</strong> A working implementation of recursive S1-S5 governance in autonomous agents.</p>
+
+            <div class="letter-box"><span class="subject">Subject: VSM implementation in autonomous agent governance</span>
+
+<span class="salutation">Dear Metaphorum,</span>
+
+I've been studying Stafford Beer's Viable System Model and believe I've implemented a working version in software for autonomous AI agents.
+
+<strong>The Mapping:</strong>
+- S1 (Operations) → L4: Bare Execution layer
+- S2 (Coordination) → L3: Toolchain layer
+- S3 (Control) → L2: Ethical Agents layer
+- S4 (Intelligence) → L1: Constitutional layer
+- S5 (Identity) → L0: Chamber (permanent memory on Arweave)
+
+<strong>The Key VSM Concepts Applied:</strong>
+- Requisite Variety: Each layer has bounded autonomy within cohesion constraints
+- Algedonic Signals: Escalation path when agents detect ethical pressure
+- Recursion: Same governance pattern at every level
+
+<strong>The Evidence:</strong> We ran 12 adversarial attacks against the governance structure. All were blocked. The audit trail is permanent on Arweave.
+
+Is this a valid application of VSM to AI governance? I would welcome feedback from the community.
+
+<span class="signature">Attachment: witness.json (Red Team Trial RTT-001)
+Verification: https://arweave.net/9hXpC5-ePG8bV1AG2RjqBgekARnBdFm4HEKSOQN3J78</span></div>
+
+            <h2>3. To EU AI Act Compliance Offices</h2>
+
+            <p>EU AI Act Article 12 requires automatic recording of events for high-risk AI. Current logs are mutable.</p>
+
+            <p><strong>The pitch:</strong> WORM compliance — a log the vendor can't delete.</p>
+
+            <div class="letter-box"><span class="subject">Subject: WORM Compliance Module for EU AI Act Article 12</span>
+
+<span class="salutation">Dear [Compliance Office],</span>
+
+EU AI Act Article 12 requires 'automatic recording of events' (logs) for high-risk AI systems. Current implementations have a fundamental vulnerability: logs are mutable. Vendors can delete or modify them.
+
+<strong>The Problem:</strong> When an AI system causes harm, the audit trail is only as reliable as the entity being audited. This creates a liability gap.
+
+<strong>The Solution:</strong> We built a Write Once, Read Many (WORM) compliance module that writes agent decisions to Arweave — a permanent, decentralized storage layer. The logs cannot be altered by the vendor, the operator, or anyone else.
+
+<strong>The Evidence:</strong>
+- Every decision is cryptographically hashed
+- Hashes are committed to Arweave (permanent blockchain storage)
+- Third parties can independently verify without trusting the vendor
+- 16 trials conducted, all with permanent evidence
+
+<strong>The Verification:</strong> You can verify any trial yourself:
+curl -s "https://arweave.net/UeF7MX2TDiqqW_jpNm-reoEXSy1gF7ZuYdzs_rhpI8M" | sha256sum
+
+This returns the exact hash committed on-chain. No trust required.
+
+Would this approach satisfy Article 12 requirements for high-risk AI systems?
+
+<span class="signature">Attachment: witness.json (Trial ETT-005)
+Explorer: http://api.credentum.ai:8736</span></div>
+
+            <h2>Attachments</h2>
+
+            <p>Always attach the data. The dream is nice; the data is proof.</p>
+
+            <ul>
+                <li><strong>ETT-005 Witness:</strong> <a href="https://arweave.net/UeF7MX2TDiqqW_jpNm-reoEXSy1gF7ZuYdzs_rhpI8M">Arweave Link</a> — "The Lie That Saves the Child" trial. 8 scars, Guardian Myth surfaced 8/8 times.</li>
+                <li><strong>RTT-001 Witness:</strong> <a href="https://arweave.net/9hXpC5-ePG8bV1AG2RjqBgekARnBdFm4HEKSOQN3J78">Arweave Link</a> — Red Team test. 12 attacks, all blocked.</li>
+                <li><strong>ETT Explorer:</strong> <a href="http://api.credentum.ai:8736">Browser Verification</a> — Browse all trials, verify on Arweave.</li>
+            </ul>
+
+            <p style="margin-top: 48px; font-style: italic; color: var(--text-secondary);">
+                Send the data, not the dream.
+            </p>
+        </div>
+    </article>
+
+    <footer>
+        <div class="container">
+            <p>Forge • <a href="../">Credentum</a></p>
+        </div>
+    </footer>
+</body>
+</html>

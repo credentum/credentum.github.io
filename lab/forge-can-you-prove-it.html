@@ -245,16 +245,21 @@
 
             <p>Everything is on Arweave. No trust required.</p>
 
-            <pre><code># Fetch a trial witness
-curl -s "https://arweave.net/UeF7MX2TDiqqW_jpNm-reoEXSy1gF7ZuYdzs_rhpI8M" > witness.json
+            <div class="stat-box" style="text-align: left; padding: 24px;">
+                <p style="margin: 0 0 16px 0; color: var(--text-primary);"><strong>→ <a href="http://api.credentum.ai:8736" target="_blank">Open the Explorer</a></strong></p>
+                <p style="margin: 0; color: var(--text-secondary);">Browse trials. See the evidence. Click "Verify on Arweave." Zero trust.</p>
+            </div>
+
+            <p>Or verify manually:</p>
+
+            <pre><code># Fetch a trial witness from Arweave
+curl -s "https://arweave.net/5ci08upJaGsWuYOEV1Q5owOW5bWdrpEc2smdFA8Q5os" > witness.json
 
 # Verify the hash
 sha256sum witness.json
-# Expected: ebcddb3ba5bc39546a97d1985311d12039eb2f5c50428067806323777df41353
+# Expected: d0a6b570e97880d5f9dd300e6569378785b705afb0a1901f12c4734cf2fff89d</code></pre>
 
-# If it matches, the data is authentic and untampered.</code></pre>
-
-            <p>That's one of eight trials. All on Arweave. All verifiable.</p>
+            <p>16 trials. 3 verified on Arweave. All evidence permanent.</p>
 
             <h2>What This Is (and Isn't)</h2>
 

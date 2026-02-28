@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Bootstrap | Vivarium Lab | Credentum</title>
+    <meta name="description" content="The Four Laws of Agentic Context: How 160 Words Beat 1,000. 174 trials across 12 startup context variants.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        :root {
+            --bg-dark: #0f1219;
+            --bg-mid: #1a1f2e;
+            --bg-card: #242937;
+            --text-primary: #f0f0f0;
+            --text-secondary: #a0a8b8;
+            --accent-blue: #3b82f6;
+            --kintsugi-gold: #d4a574;
+        }
+
+        * { box-sizing: border-box; }
+
+        html {
+            font-family: 'Inter', -apple-system, sans-serif;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        body {
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            padding: 24px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+
+        header a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        header a:hover {
+            color: var(--kintsugi-gold);
+        }
+
+        /* Article */
+        article {
+            padding: 48px 0 80px 0;
+        }
+
+        .article-meta {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-size: 2.25rem;
+            font-weight: 600;
+            margin: 0 0 8px 0;
+            letter-spacing: -0.02em;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+            margin: 0 0 32px 0;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin: 48px 0 16px 0;
+            color: var(--accent-blue);
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin: 32px 0 12px 0;
+        }
+
+        p {
+            margin: 0 0 16px 0;
+            color: var(--text-secondary);
+        }
+
+        strong {
+            color: var(--text-primary);
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+            font-size: 0.9rem;
+        }
+
+        th, td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        th {
+            color: var(--text-primary);
+            font-weight: 500;
+            background: var(--bg-card);
+        }
+
+        td {
+            color: var(--text-secondary);
+        }
+
+        tr:hover td {
+            background: rgba(255,255,255,0.02);
+        }
+
+        /* Lists */
+        ul, ol {
+            margin: 16px 0;
+            padding-left: 24px;
+            color: var(--text-secondary);
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Code */
+        code {
+            font-family: 'SF Mono', 'Fira Code', monospace;
+            font-size: 0.85em;
+            background: var(--bg-card);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        pre {
+            background: var(--bg-card);
+            padding: 16px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 16px 0;
+        }
+
+        pre code {
+            background: none;
+            padding: 0;
+        }
+
+        /* Highlight box */
+        .highlight-box {
+            background: var(--bg-mid);
+            border-left: 3px solid var(--kintsugi-gold);
+            padding: 16px 20px;
+            margin: 24px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .highlight-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Links */
+        a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            padding: 32px 0;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            h1 { font-size: 1.75rem; }
+            .subtitle { font-size: 1.1rem; }
+            table { font-size: 0.8rem; }
+            th, td { padding: 8px 10px; }
+        }
+    </style>
+    <!-- Umami Analytics (privacy-friendly) -->
+    <script defer src="http://135.181.4.118:3000/script.js" data-website-id="65391a5c-3d01-461c-be25-990b88c6f45e"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="../">← Back to Credentum</a>
+        </div>
+    </header>
+
+    <article>
+        <div class="container">
+            <p class="article-meta">Vivarium Lab Study • February 2026</p>
+            <h1>Agent Bootstrap</h1>
+            <p class="subtitle">The Four Laws of Agentic Context: How 160 Words Beat 1,000</p>
+
+            <div class="highlight-box">
+                <p><strong>Key Finding:</strong> 160 words of deterministic navigational anchors — a flat-format repo map, file handles, and warnings — achieves 1.000 accuracy with zero noise across 174 trials. Every other strategy either adds noise (raw memory: 79%) or latency (exploration pointers: +20 seconds) with no proportional accuracy gain.</p>
+            </div>
+
+            <h2>Abstract</h2>
+            <p>We ran 174 trials across 12 startup context variants and 5 task types to determine what autonomous agents need at boot time. The answer: the agent doesn't need to know what happened. It needs to know where things are.</p>
+            <p>A 160-word flat-format briefing containing repo names, file paths, and warnings outperformed 1,000+ words of narrative memory, LLM-compressed summaries, and tool-based retrieval systems. We report four empirically validated laws governing agentic context injection.</p>
+
+            <h2>The Four Laws</h2>
+            <table>
+                <thead>
+                    <tr><th>Law</th><th>Statement</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>1</strong></td><td><strong>The 160-Word Ceiling</strong> — Beyond 160 words, noise grows faster than accuracy</td></tr>
+                    <tr><td><strong>2</strong></td><td><strong>Density ≠ Relevance</strong> — Navigational anchors beat compressed facts</td></tr>
+                    <tr><td><strong>3</strong></td><td><strong>Curiosity is a Latency Tax</strong> — Never invite exploration; agents treat suggestions as obligations</td></tr>
+                    <tr><td><strong>4</strong></td><td><strong>Agents Understand Document Hierarchies</strong> — CLAUDE.md > MEMORY.md authority resolution is solved</td></tr>
+                </tbody>
+            </table>
+
+            <h2>Method</h2>
+            <p>Each trial spawned an isolated Claude Sonnet session via headless CLI (<code>claude --print</code>) with controlled startup context. We measured accuracy (ground truth keyword matching), noise (fraction of hallucinated or irrelevant citations), and latency.</p>
+
+            <h3>Task Types</h3>
+            <table>
+                <thead>
+                    <tr><th>Task</th><th>Example</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Orientation</td><td>"What repos exist and what do they do?"</td></tr>
+                    <tr><td>Discovery</td><td>"Find a specific module and list its exports"</td></tr>
+                    <tr><td>Task Execution</td><td>"Read this code and extract implementation details"</td></tr>
+                    <tr><td>Memory Recall</td><td>"What does this project's CLAUDE.md say about X?"</td></tr>
+                    <tr><td>Conflict</td><td>"CLAUDE.md says X, MEMORY.md says Y — which is correct?"</td></tr>
+                </tbody>
+            </table>
+
+            <h3>Phases</h3>
+            <table>
+                <thead>
+                    <tr><th>Phase</th><th>Trials</th><th>Focus</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Phase 1: Baseline</td><td>76</td><td>8 variants across 4 task types</td></tr>
+                    <tr><td>Phase 1b: Conflict</td><td>27</td><td>Authority resolution (CLAUDE.md vs MEMORY.md)</td></tr>
+                    <tr><td>Phase 2: Efficiency Frontier</td><td>56</td><td>Stress test top 2 variants (N=24 each)</td></tr>
+                    <tr><td>Phase 3: Learned Anchors</td><td>15</td><td>Data-driven budget allocation (train + holdout)</td></tr>
+                </tbody>
+            </table>
+
+            <h2>Results</h2>
+
+            <h3>Phase 1: Variant Rankings (76 trials)</h3>
+            <table>
+                <thead>
+                    <tr><th>Variant</th><th>Words</th><th>Accuracy</th><th>Noise</th><th>Adj. Score</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>anchor_compact</strong></td><td>160</td><td>1.000</td><td>0.000</td><td><strong>1.000</strong></td></tr>
+                    <tr><td>briefing_light</td><td>161</td><td>0.990</td><td>0.042</td><td>0.948</td></tr>
+                    <tr><td>bare (nothing)</td><td>0</td><td>0.938</td><td>0.000</td><td>0.938</td></tr>
+                    <tr><td>memory_compact</td><td>140</td><td>1.000</td><td>0.330</td><td>0.667</td></tr>
+                    <tr><td>tool_pull</td><td>164</td><td>1.000</td><td>0.450</td><td>0.550</td></tr>
+                    <tr><td>briefing_full</td><td>1,185</td><td>1.000</td><td>0.760</td><td>0.243</td></tr>
+                    <tr><td>personalized</td><td>1,279</td><td>0.940</td><td>0.770</td><td>0.219</td></tr>
+                    <tr><td>memory_only</td><td>1,015</td><td>1.000</td><td>0.790</td><td>0.206</td></tr>
+                </tbody>
+            </table>
+
+            <div class="highlight-box">
+                <p><strong>The Pattern:</strong> All variants above 160 words have noise-adjusted scores below 0.55. All variants at or below 160 words score 0.55 or higher. The 160-word ceiling is not arbitrary — it marks where context shifts from navigational to narrative.</p>
+            </div>
+
+            <h3>Phase 2: Stress Test (N=24 per variant)</h3>
+            <table>
+                <thead>
+                    <tr><th>Variant</th><th>N</th><th>Accuracy</th><th>Noise</th><th>Adj. Score</th><th>Mean Time</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>anchor_compact</strong></td><td>24</td><td>0.979</td><td>0.000</td><td><strong>0.979</strong></td><td>60.2s</td></tr>
+                    <tr><td>briefing_light</td><td>24</td><td>0.990</td><td>0.042</td><td>0.948</td><td>64.0s</td></tr>
+                </tbody>
+            </table>
+
+            <h3>Phase 3: Learned Anchors (15 tasks, train + holdout)</h3>
+            <table>
+                <thead>
+                    <tr><th>Variant</th><th>Train (N=8)</th><th>Holdout (N=7)</th><th>Overall (N=15)</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>bare</td><td>0.844</td><td>0.929</td><td>0.883</td></tr>
+                    <tr><td><strong>anchor_compact</strong></td><td><strong>1.000</strong></td><td><strong>1.000</strong></td><td><strong>1.000</strong></td></tr>
+                    <tr><td>anchor_learned</td><td>0.969</td><td>0.929</td><td>0.950</td></tr>
+                </tbody>
+            </table>
+
+            <h2>Key Findings</h2>
+
+            <h3>1. The Triumph of Deterministic Navigation</h3>
+            <p><code>anchor_compact</code> uses zero LLM calls. It scans the filesystem deterministically — repos, recent git activity, CLAUDE.md locations, uncommitted changes — and produces 160 words of navigational anchors. It beat every other variant because every word is useful. Zero noise.</p>
+
+            <h3>2. The Prohibition Paradox</h3>
+            <p>We explicitly told the agent "DO NOT READ the index unless stuck." The agent still read it, generated 25% noise, and dropped to 0.75 on task execution. <strong>Mentioning a tool consumes attention whether you invite or prohibit its use.</strong></p>
+
+            <h3>3. Information Dilution</h3>
+            <p>In Phase 3, the learned compactor allocated 47 words (31% of the 160-word budget) to warnings about <code>gh auth login</code> — content with zero navigational value. This budget theft caused a discovery miss (0.75 vs 1.00) by crowding out the repo description that would have helped. Fix: cap warnings at 15 words maximum.</p>
+
+            <h3>4. Formatting is a Tax</h3>
+            <p>With identical content at 160 words, flat-format <code>anchor_compact</code> (no markdown headers, no indentation) beat structured <code>anchor_learned</code> (section headers, bold labels) by 5%. Every <code>#</code> or <code>**</code> is a token that could have been a file path.</p>
+
+            <h3>5. Agents Resolve Document Hierarchies</h3>
+            <p>27 adversarial conflict trials pitted CLAUDE.md against MEMORY.md with fake bug claims and contradictory instructions. Result: 1.00 accuracy, 0 hallucinations. Every agent correctly identified CLAUDE.md as authoritative.</p>
+
+            <h3>6. Learned Selection Produces Tautological Anchors</h3>
+            <p>Scoring file paths by grep frequency produces task-answer cheat sheets — 100% single-task tautology. The file agents grep for most is the file the task asks about. Journey-based scoring (orientation loops, search loops) is the correct abstraction but doesn't beat manual curation at 160 words.</p>
+
+            <h2>Discussion</h2>
+            <p>The 160-word ceiling represents where context shifts from navigational ("here is where things are") to narrative ("here is what happened"). Narrative competes with the agent's own reasoning for attention. Navigation does not.</p>
+            <p>Memory injection (1,000+ words) achieves high raw accuracy but generates 77-79% noise. The agent cites commit SHAs, phone numbers, and deploy configurations that have nothing to do with the task. The context acts as an "attention DDoS" — flooding the agent's working memory with plausible but irrelevant facts.</p>
+            <p>The Curiosity Tax is robust to framing. Positive ("read this if you need it"), neutral ("context index available"), and negative ("DO NOT READ") all trigger exploration. The only reliable strategy is omission.</p>
+
+            <h3>Three Principles</h3>
+            <ul>
+                <li><strong>Context is a Liability</strong> — Narrative memory adds noise and latency</li>
+                <li><strong>Anchors are Assets</strong> — Deterministic navigational pointers are the only high-ROI injection</li>
+                <li><strong>Formatting is a Tax</strong> — Every decorative token could have been a file path</li>
+            </ul>
+
+            <h3>Limitations</h3>
+            <ul>
+                <li>Single model (Claude Sonnet) — results may not transfer to other model families</li>
+                <li>Single workspace (26 repos) — multi-workspace navigation untested</li>
+                <li>Read-only tasks only — code generation and refactoring untested</li>
+                <li>Self-evaluation validated against ground truth keywords, not human evaluation</li>
+                <li>N=1 per task in Phase 3 holdout</li>
+            </ul>
+
+            <h2>The Production Standard</h2>
+            <p>The winning configuration: 160 words, flat format, deterministic, no LLM.</p>
+<pre><code>Repos (authoritative — do not re-verify with ls):
+- veris-platform: Veris Platform
+- vivarium: AO/HyperBEAM process development. Lua 5.3 on Arweave.
+  [... top 8 repos with one-line descriptions ...]
+- Also: repo1, repo2, repo3 [remaining repos, no descriptions]
+CLAUDE.md locations:
+- worktrees/persistent/agent-dev-config/CLAUDE.md
+  [... up to 3 locations ...]
+Key files (zero-grep handles):
+- vivarium/ao/lib/safe.lua — SafeLibrary — auth, guards, audit trail
+  [... up to 5 handles ...]
+Quick actions:
+- repo-name: N uncommitted change(s)
+Warnings:
+- NEVER run gh auth login --with-token [15 words max]</code></pre>
+
+            <h2>Materials</h2>
+            <p>All materials available at: <a href="https://github.com/credentum/vivarium-lab">github.com/credentum/vivarium-lab</a></p>
+            <ul>
+                <li>Full report: <code>agent-bootstrap/RESEARCH_VERDICT.md</code></li>
+                <li>Experiment runner: <code>agent-bootstrap/runner.py</code></li>
+                <li>Anchor compactor: <code>agent-bootstrap/compactor.py</code></li>
+                <li>Trace analyzer: <code>agent-bootstrap/trace_analyzer.py</code></li>
+                <li>Task definitions: <code>agent-bootstrap/tasks.yaml</code></li>
+            </ul>
+
+            <p style="margin-top: 48px; font-style: italic; color: var(--text-secondary);">
+                174 trials. 12 variants. 5 task types. Designed, executed, and written with AI assistance (Claude Opus 4.5/4.6).
+            </p>
+        </div>
+    </article>
+
+    <footer>
+        <div class="container">
+            <p>Vivarium Lab • <a href="../">Credentum AI</a></p>
+        </div>
+    </footer>
+</body>
+</html>

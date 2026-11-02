@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Credentum | Truth, remembered.</title>
-    <meta name="description" content="Agent telemetry and security tools. We build logging, measurement, and static analysis for AI agents and AO processes.">
+    <meta name="description" content="Telemetry and evals for AI agents, where gates catch claims that don't match reality. Research and open-source tools from Credentum.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/reset.css">
@@ -383,9 +383,8 @@
                     <h1>Credentum</h1>
                     <p class="tagline">"Truth, remembered."</p>
                     <p class="hero-description">
-                        We build telemetry and security tools for AI&nbsp;agents.
-                        Logging that captures what actually happened.
-                        Analysis that catches what&nbsp;shouldn't.
+                        Telemetry and evals for AI&nbsp;agents,
+                        where gates catch claims that don't match&nbsp;reality.
                     </p>
                     <div class="kintsugi-line"></div>
                 </div>
@@ -398,13 +397,14 @@
                 <h2>Why We Exist</h2>
                 <div class="why-content">
                     <p>
-                        AI agents run in loops. They fabricate. They&nbsp;drift.<br>
-                        And nobody's&nbsp;watching.
+                        AI agents report on their own work. "Tests pass." "Fixed." "Deployed."<br>
+                        Sometimes the report and the record&nbsp;disagree.
                     </p>
                     <p>
-                        We build the tools that watch. Structured logging for every output,
-                        confabulation detection, vocabulary drift measurement, and static
-                        analysis that catches security holes before&nbsp;deployment.
+                        Our approach: telemetry that records what an agent actually did,
+                        and evals that check what it says against that record. The check
+                        is a gate the agent can't reach, so a claim that doesn't match
+                        reality gets caught instead of&nbsp;believed.
                     </p>
                     <p>
                         Not because we don't trust&nbsp;agents.<br>
@@ -419,7 +419,7 @@
             <div class="container">
                 <h3>Get research findings first</h3>
                 <p>
-                    Studies like Movable Feast before they go public. No&nbsp;spam.
+                    New studies and findings before they go public. No&nbsp;spam.
                 </p>
                 <form class="signup-form" action="https://credentum-pub--credentum-signup-fastapi-app.modal.run/subscribe" method="POST">
                     <input type="email" name="email" required placeholder="you@example.com">
@@ -431,26 +431,49 @@
 
         <!-- Content Area -->
         <div class="content-area">
-            <!-- What We Build -->
+            <!-- Our Approach -->
             <section>
                 <div class="container">
-                    <h2>What We Build</h2>
+                    <h2>Our Approach</h2>
                     <p>
-                        Open source tools for observing, measuring, and securing AI agent behavior.
+                        Where our work is headed. Two pieces that only work together: a record of what happened,
+                        and a check that holds the agent's claims to it.
                     </p>
                     <div class="cards">
                         <div class="card">
-                            <h3>Vivarium</h3>
+                            <h3>Telemetry</h3>
                             <p>
-                                An autonomous agent telemetry harness. Runs any OpenRouter model in a loop, logs every output with structured witness data, and measures three things: how much the agent fabricates (confabulation detector), how far its vocabulary drifts from baseline (Jaccard), and actual vs requested token usage.
+                                A record of what the agent did: what it said, what it ran, what came back.
+                                Written somewhere the agent can't edit, so it can be checked&nbsp;later.
                             </p>
                             <p class="card-meta">
-                                The probes are the interesting part: stripped-context snapshots that let you diff the model's resting state against its contextualized output at any point in the run.
-                            </p>
-                            <p style="margin-top: 12px;">
-                                hello@credentum.ai
+                                This is the direction of our work, not a product you can sign up&nbsp;for.
                             </p>
                         </div>
+                        <div class="card">
+                            <h3>Evals with gates</h3>
+                            <p>
+                                Checks that compare an agent's claim with the record. "All tests pass"
+                                only counts if the run log says so. The gate sits outside the agent's
+                                reach, and its pass bar is set before the results come&nbsp;in.
+                            </p>
+                            <p class="card-meta">
+                                Our research already works this way: each Verifiability Seam experiment
+                                commits its kill threshold before any data exists. See Vivarium Lab&nbsp;below.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Open-Source Tools -->
+            <section>
+                <div class="container">
+                    <h2>Open-Source Tools</h2>
+                    <p>
+                        Tools we've published for AO/Arweave developers and their AI&nbsp;assistants.
+                    </p>
+                    <div class="cards">
                         <div class="card">
                             <h3>ao-lens</h3>
                             <p>
@@ -487,11 +510,23 @@
                 <div class="container">
                     <h2>Vivarium Lab</h2>
                     <p>
-                        Research findings from our work on AI agents and reliability.
+                        Research on AI agents, evals and reliability.
                         Real experiments. Honest results.
                     </p>
 
                     <div class="cards">
+                        <div class="card">
+                            <h3>The Verifiability Seam</h3>
+                            <p>
+                                What happens to an eval when the judges have a stake in the verdict.
+                                Output-only signals, thresholds fixed before any data. The first pilot
+                                was inconclusive on its main question; on clear items, staked panels
+                                flipped to the wrong answer 9 times out of 12. In progress.
+                            </p>
+                            <p style="margin-top: 12px;">
+                                <a href="https://github.com/credentum/vivarium-lab/tree/main/verifiability-seam">Read the program</a>
+                            </p>
+                        </div>
                         <div class="card">
                             <h3>Governance as Computation</h3>
                             <p>
@@ -557,7 +592,7 @@
         <div class="container">
             <p>Contact: hello@credentum.ai</p>
             <p class="footer-tagline">Truth, remembered.</p>
-            <p>&copy; 2025 Credentum</p>
+            <p>&copy; 2025&ndash;2026 Credentum</p>
         </div>
     </footer>
     <script>

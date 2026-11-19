@@ -423,6 +423,10 @@
                 </p>
                 <form class="signup-form" action="https://credentum-pub--credentum-signup-fastapi-app.modal.run/subscribe" method="POST">
                     <input type="email" name="email" required placeholder="you@example.com">
+                    <div style="position:absolute;left:-9999px" aria-hidden="true">
+                        <label>Leave this field empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+                    </div>
+                    <input type="hidden" name="elapsed" value="">
                     <button type="submit" class="signup-button">Join the List</button>
                 </form>
                 <p class="signup-note">Research updates only. Unsubscribe anytime.</p>
@@ -603,7 +607,9 @@
         }
 
         // Handle form submission with loading state
+        const signupLoadedAt = Date.now();
         document.querySelector('.signup-form').addEventListener('submit', function(e) {
+            this.elements.elapsed.value = Date.now() - signupLoadedAt;
             const btn = this.querySelector('.signup-button');
             btn.disabled = true;
             btn.innerHTML = '<span class="spinner"></span>Joining...';

@@ -367,6 +367,7 @@
     </style>
     <!-- Umami Analytics (privacy-friendly) -->
     <script defer src="http://135.181.4.118:3000/script.js" data-website-id="65391a5c-3d01-461c-be25-990b88c6f45e"></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
     <!-- Success banner (shown after signup) -->
@@ -428,6 +429,7 @@
                     </div>
                     <input type="hidden" name="elapsed" value="">
                     <button type="submit" class="signup-button">Join the List</button>
+                    <div class="cf-turnstile" data-sitekey="0x4AAAAAAGJKexmyScIDeyG5" data-theme="auto" style="flex-basis:100%"></div>
                 </form>
                 <p class="signup-note">Research updates only. Unsubscribe anytime.</p>
             </div>
@@ -609,6 +611,14 @@
         // Handle form submission with loading state
         const signupLoadedAt = Date.now();
         document.querySelector('.signup-form').addEventListener('submit', function(e) {
+            const token = this.elements['cf-turnstile-response'];
+            if (!token || !token.value) {
+                // Verification has not finished yet; do not submit without it
+                e.preventDefault();
+                this.parentNode.querySelector('.signup-note').textContent =
+                    'Still verifying you are human. Please try again in a moment.';
+                return;
+            }
             this.elements.elapsed.value = Date.now() - signupLoadedAt;
             const btn = this.querySelector('.signup-button');
             btn.disabled = true;
